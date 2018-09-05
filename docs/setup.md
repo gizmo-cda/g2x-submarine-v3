@@ -16,6 +16,8 @@ git init --bare
 In order to update the application directory on the Pi each time a commit to master is pushed to it, create the following script at `/home/pi/g2x-submarine-v3.git/hooks/post-update:
 
 ```sh
+#!/usr/bin/env bash
+
 unset GIT_DIR
 
 APP_DIR="~/app"
