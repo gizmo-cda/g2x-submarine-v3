@@ -1,7 +1,21 @@
+- [Setup Static IP Fallback](#setup-static-ip-fallback)
 - [Setup Git Remote](#setup-git-remote)
 - [Setup Service](#setup-service)
+- [Setup Pimoroni](#setup-pimoroni)
 
 ---
+
+# Setup Static IP Fallback
+
+Edit `/etc/dhcpcd.conf` and add the following text to the end of the file:
+
+```
+interface eth0
+fallback static_eth0
+
+profile static_eth0
+static ip_address=192.168.0.1/24
+```
 
 # Setup Git Remote
 
@@ -76,3 +90,7 @@ You can check the status of your service:
 ```bash
 systemctl status g2x-camera
 ```
+
+# Setup Pimoroni
+
+- [Enviro Phat Getting Started](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-enviro-phat)
