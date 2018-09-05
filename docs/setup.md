@@ -24,8 +24,8 @@ APP_DIR="~/app"
 
 if [ "$1" == "refs/heads/master" ]; then
     echo "Detected commit to master"
-    echo "Updating ${APP} directory."
-    git -C "${APP}" pull
+    echo "Updating ${APP_DIR} directory."
+    git -C "${APP_DIR}" pull
 fi
 ```
 
