@@ -20,7 +20,7 @@ In order to update the application directory on the Pi each time a commit to mas
 
 unset GIT_DIR
 
-APP_DIR="~/app"
+APP_DIR="home/pi/app"
 
 if [ "$1" == "refs/heads/master" ]; then
     echo "Detected commit to master"
