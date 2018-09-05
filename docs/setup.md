@@ -52,8 +52,7 @@ git push pi master
 Run the following to initialize the service and make it start automatically when the system boots:
 
 ```bash
-cd /etc/systemd/system
-sudo chmod 755 g2x-camera.service
+sudo cp g2x-camera.service /etc/systemd/system
 sudo systemctl enable g2x-camera
 ```
 

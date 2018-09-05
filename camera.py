@@ -33,7 +33,7 @@ class CameraController:
 
         if self.record:
             timestamp = int(time.time())
-            filename = "g2x-balloon-{}.h264".format(timestamp)
+            filename = "g2x-submarine-{}.h264".format(timestamp)
             self.camera.start_recording(filename)
         else:
             self.camera.stop_recording()
