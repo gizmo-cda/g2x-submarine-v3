@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from envirophat import light, motion, weather
+from envirophat import light, motion, weather, leds
 import csv
 import time
 
