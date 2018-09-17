@@ -1,7 +1,7 @@
 - [Setup Static IP Fallback](#setup-static-ip-fallback)
 - [Setup Git Remote](#setup-git-remote)
-- [Setup Service](#setup-service)
 - [Setup Pimoroni](#setup-pimoroni)
+- [Setup Service](#setup-service)
 
 ---
 
@@ -61,6 +61,14 @@ You'll now be able to push to that repository:
 git push pi master
 ```
 
+# Setup Pimoroni
+
+- [Enviro Phat Getting Started](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-enviro-phat)
+
+```bash
+curl https://get.pimoroni.com/envirophat | bash
+```
+
 # Setup Service
 
 Run the following to initialize the service and make it start automatically when the system boots:
@@ -90,7 +98,3 @@ You can check the status of your service:
 ```bash
 systemctl status g2x-camera
 ```
-
-# Setup Pimoroni
-
-- [Enviro Phat Getting Started](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-enviro-phat)
