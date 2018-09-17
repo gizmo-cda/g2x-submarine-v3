@@ -12,7 +12,7 @@ with open(filename, 'w', newline='') as f:
 
     writer.writerow([
         "r", "g", "b",
-        "x", "y", "z", "heading",
+        "x", "y", "z", # "heading",
         "celsius", "hPa"
     ])
 
