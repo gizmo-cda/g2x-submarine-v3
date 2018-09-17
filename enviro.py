@@ -3,6 +3,14 @@
 from envirophat import light, motion, weather, leds
 import csv
 import time
+import atexit
+
+
+def shutdown():
+    print("shutting down")
+    leds.off()
+
+atexit.register(shutdown)
 
 timestamp = int(time.time())
 filename = "g2x-submarine-{}.csv".format(timestamp)
@@ -35,4 +43,7 @@ with open(filename, 'w', newline='') as f:
             temp_in_celsius, pressure_in_hpa
         ])
 
+        f.flush()
+
         time.sleep(1)
+

@@ -10,7 +10,7 @@ StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=g2x-enviro
 User=pi
-#Group=<alternate group>
+Group=pi
 
 [Install]
 WantedBy=multi-user.target
