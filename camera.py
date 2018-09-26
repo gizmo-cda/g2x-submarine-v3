@@ -5,7 +5,7 @@ import time
 
 
 class CameraController:
-    def __init__(self, resolution=(1296, 972), framerate=24):
+    def __init__(self, resolution=(1296, 972), framerate=15):
         self.camera = None
         self.resolution = resolution
         self.framerate = framerate
