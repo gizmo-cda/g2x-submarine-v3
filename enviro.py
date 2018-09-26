@@ -19,6 +19,7 @@ with open(filename, 'w', newline='') as f:
     writer = csv.writer(f)
 
     writer.writerow([
+        "time",
         "r", "g", "b",
         "x", "y", "z", # "heading",
         "celsius", "hPa"
@@ -31,6 +32,7 @@ with open(filename, 'w', newline='') as f:
     leds.on()
 
     while True:
+        t = time.time()
         r, g, b = light.rgb()
         x, y, z = motion.accelerometer()
         # heading = (motion.heading() - north) % 360
@@ -38,6 +40,7 @@ with open(filename, 'w', newline='') as f:
         pressure_in_hpa = weather.pressure(unit='hPa')
 
         writer.writerow([
+            t,
             r, g, b,
             x, y, z, # heading,
             temp_in_celsius, pressure_in_hpa
