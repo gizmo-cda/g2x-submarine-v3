@@ -22,7 +22,7 @@ def light_off():
 
 def init_gpio():
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(LIGHT_PIN, GPIO.OUT);
+    GPIO.setup(LIGHT_PIN, GPIO.OUT)
 
 
 def shutdown(signum=0, frame=None):
