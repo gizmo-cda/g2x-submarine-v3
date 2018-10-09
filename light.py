@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
 import os
-import atexit
 import time
+import atexit
+import signal
 import RPi.GPIO as GPIO
 
 SECOND = 1
@@ -24,7 +25,7 @@ def init_gpio():
     GPIO.setup(LIGHT_PIN, GPIO.OUT);
 
 
-def shutdown():
+def shutdown(signum=0, frame=None):
     light_off()
     GPIO.cleanup([LIGHT_PIN])
 
@@ -32,12 +33,13 @@ def shutdown():
 if __name__ == "__main__":
     if os.geteuid() != 0:
         print("You must run this script with root privileges")
-        sys.exit(1)
+        exit(1)
 
-    # cleanup on exit
+    # cleanup on exit or sigterm
     atexit.register(shutdown)
+    signal.signal(signal.SIGTERM, shutdown)
 
-    # initalize GPIO
+    # initialize GPIO
     init_gpio()
 
     # go through light cycle forever
