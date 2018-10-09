@@ -36,9 +36,10 @@ In order to update the application directory on the Pi each time a commit to mas
 unset GIT_DIR
 
 APP_DIR="/home/pi/app"
+BRANCH="master"
 
-if [ "$1" == "refs/heads/master" ]; then
-    echo "Detected commit to master"
+if [ "$1" == "refs/heads/${BRANCH}" ]; then
+    echo "Detected commit to ${BRANCH}"
     echo "Updating ${APP_DIR} directory."
     git -C "${APP_DIR}" pull
 fi
