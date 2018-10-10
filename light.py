@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     # cleanup on exit or sigterm
     atexit.register(shutdown)
-    signal.signal(signal.SIGTERM, shutdown)
+    #signal.signal(signal.SIGTERM, shutdown)
 
     # initialize GPIO
     init_gpio()
